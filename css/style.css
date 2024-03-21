@@ -31,7 +31,62 @@ body {
   height: -webkit-fill-available;
 }
 
+h1 {
+  font-weight: var(--weight1);
+  color: var(--varyDarkBlue);
 
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: var(--weight3);
+  color: var(--varyDarkBlue);
+  line-height: 37px;
+}
+
+h3 {
+  color: var(--varyDarkBlue);
+  font-weight: var(--weight3);
+  line-height: 25px;
+  padding-top: 2%;
+  font-size: 22px;
+}
+
+h4 {
+  color: var(--varyDarkBlue);
+  font-weight: var(--weight3);
+  font-size: 18px;
+  padding-top: 0.7%;
+}
+/*  ---------------- section 1------------- */
+
+.sub-head{
+  font-size: 12px;
+}
+
+.right{
+  border-left: 1px solid #5d5d5d;
+  width: 100%;
+}
+.placement{
+  width: 60%;
+  background-color: #0c5439;
+  height: 30%;
+  text-align: center;
+}
+.placement p{
+  font-size: 20px;
+  padding: 5% 10%;
+}
+.job{
+  width: 40%;
+  background-color: #009f65;
+  height: 40%;
+  text-align: center;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+}
 .video-play-button {
   position: absolute;
   z-index: 10;
@@ -245,8 +300,7 @@ video {
 }
 
 .btn-darken {
-  padding: 0.75rem 2rem;
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--shadow-medium)!important;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.25;
@@ -470,36 +524,29 @@ video {
   row-gap: 3rem;
 }
 
-/* Add styles for the circular play button */
 .btn-play {
   width: 3.5rem;
-  /* Adjust size as needed */
   height: 3.5rem;
   border-radius: 50%;
-  /* Make it circular */
   background-color: #007bff;
-  /* Example color, change as needed */
+
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 1rem;
-  /* Adjust spacing */
 }
 
 .btn-play i {
   font-size: 2rem;
-  /* Adjust icon size */
   color: #fff;
-  /* Icon color */
 }
 
-/* Adjust inline button spacing */
 .btn-inline {
   display: flex;
   align-items: center;
   column-gap: 1rem;
-  /* Adjust spacing between buttons */
 }
+
 
 @media only screen and (max-width: 3600px) and (min-width: 500px) {
 
@@ -514,14 +561,31 @@ video {
   .burger.is-active {
     color: #1f1f1f !important;
   }
+
   .slider__arrows {
     transform: translateY(650%) !important;
-    
-}
-.section-three {
-  background-image: url(../img/mobile.png) !important;
 
-}}
+  }
+
+  .section-three {
+    background-image: url(../img/mobile.png) !important;
+
+  }
+
+  .section-three .maindiv {
+    padding-right: 0% !important;
+  }
+
+  .faq {
+    padding: 40% 0% !important;
+  }
+
+  .accordion {
+    width: 100% !important;
+  }
+
+}
+
 @media only screen and (min-width: 48rem) {
   .banner-column {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -712,7 +776,9 @@ video {
   width: 100%;
   max-width: 80%;
   margin: 0 auto;
-}.section-three {
+}
+
+.section-three {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -720,10 +786,11 @@ video {
   width: 100%;
   margin: 0 auto;
   max-width: 100%;
- 
+
 }
 
-.box {
+.box,
+.certibox {
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
@@ -733,26 +800,29 @@ video {
 .box-down,
 .middle {
   background: #cbe0d4;
-  box-shadow: 0px 16px 32px  rgb(9 11 17 / 40%);
+  box-shadow: 0px 16px 32px rgb(9 11 17 / 40%);
   border-radius: 20px;
 }
 
-.box-up  img,
-.box-down  img,
-.middle img{
+.box-up img,
+.box-down img,
+.middle img {
   width: 15%;
   padding: 4% 3%;
 }
 
-#hide{
+#hide {
   display: none;
 }
+
 @media (max-width: 768px) {
-  .container-two,.section-three  {
+
+  .container-two,
+  .section-three {
     flex-direction: column;
     width: 100%;
   }
- 
+
 }
 
 :root {
@@ -766,27 +836,17 @@ video {
   --weight1: 200;
   --weight2: 400;
   --weight3: 600;
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-light: hsla(179, 62%, 43%, 0.75);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  --fw-normal: 400;
+  --fw-bold: 700;
 }
 
-
-
-
-h1:first-of-type {
-  font-weight: var(--weight1);
-  color: var(--varyDarkBlue);
-
-}
-h2{
-  
-    font-weight: var(--weight3);
-    color: var(--varyDarkBlue);
-  line-height: 30px;
-  }
-
-
-h1:last-of-type {
-  color: var(--varyDarkBlue);
-}
 
 @media (max-width: 400px) {
   h1 {
@@ -798,7 +858,7 @@ h1:last-of-type {
   max-width: 30% !important;
 }
 
-#sectiontwo-inner{
+#sectiontwo-inner {
   border: 0;
   padding-right: 30%;
 }
@@ -819,27 +879,29 @@ h1:last-of-type {
   .box {
     height: auto;
   }
-  #sectiontwo-inner{
+
+  #sectiontwo-inner {
     padding: 0%;
   }
+
   #orange {
     max-width: 100% !important;
-  }.container-two  {
+  }
+
+  .container-two {
     width: 100%;
     max-width: 90%;
     text-align: center;
-      }
-      .row1-container,
+  }
+
+  .row1-container,
   .row2-container {
     transform: translateY(-10%);
   }
 }
 
-h3 {
-  color: var(--varyDarkBlue);
-  font-weight: var(--weight3);
-  line-height: 20px;
-}
+
+
 
 
 @media (min-width: 950px) {
@@ -849,9 +911,9 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-   padding: 0% 12%;
-   transform: translateY(-40%);
-    
+    padding: 0% 12%;
+    transform: translateY(-40%);
+
   }
 
 
@@ -886,29 +948,35 @@ h3 {
   background-repeat: no-repeat;
   padding: 10% 0%;
 }
-.section-three .box{
+
+.section-three .box {
   padding: 5% 0%;
 }
 
-.sectionthree-heading{
+.sectionthree-heading {
   padding: 6% 0% 0% 0%;
 }
+
+.section-three .maindiv {
+  padding-right: 15%;
+}
+
 :root {
- 
+
   --card-aspect-ratio: 16 / 9;
-  
+
   --arrow-size: 2.5rem;
   --arrow-icon-size: 1.75rem;
   --arrow-icon-color: rgb(0 0 0 / 50%);
   --arrow-icon-color-hover: rgb(0 0 0 / 75%);
   --arrow-bg-color: transparent;
   --arrow-bg-color-hover: rgb(0 0 0 / 10%);
-  
+
   --bullet-size: .5rem;
-  
+
   --transition-speed: .5s;
   --transition-bezier: cubic-bezier(0.55, -0.85, 0.2, 1.85);
-  
+
   --icon-arrow: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwLDExVjEzSDhMMTMuNSwxOC41TDEyLjA4LDE5LjkyTDQuMTYsMTJMMTIuMDgsNC4wOEwxMy41LDUuNUw4LDExSDIwWiIgLz48L3N2Zz4=");
 }
 
@@ -993,7 +1061,8 @@ h3 {
   background-color: var(--arrow-icon-color-hover);
 }
 
-.slider__arrow--next, .slider__arrow--prev{
+.slider__arrow--next,
+.slider__arrow--prev {
   font-weight: 700;
 }
 
@@ -1040,6 +1109,122 @@ h3 {
 }
 
 .play-button::before {
-  content: "\25B6"; /* Unicode character for play button */
+  content: "\25B6";
   font-size: 25px;
+}
+
+/* section 4 - certificate */
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rectangle {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.rectangle:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.rectangle img {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+.box-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.box-description {
+  margin-bottom: 10px;
+}
+
+.download-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* section-4 : certificate  */
+
+
+
+
+/* section-5 : faq */
+
+
+.faq {
+  padding: 10% 0%;
+}
+
+.faq h2,
+h4 {
+  text-align: center;
+}
+
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.accordion-item {
+  background-color: #fff;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #5d5d5d;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+  padding: 1rem;
+  border-top: 1px solid;
+  height: 100%;
+  font-size: 90%;
+  font-weight: normal;
+  color: #8f8f8f;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
 }
