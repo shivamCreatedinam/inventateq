@@ -1186,6 +1186,122 @@ video {
 /* section-4 : certificate  */
 
 
+[class*="col-"] {
+  float: left;
+}
+
+.col-1-8 {
+  width: 12.5%;
+}
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+[class*="col-"]:last-of-type {
+  padding-right: 0;
+}
+
+.grid-pad {
+  padding: 20px 0 20px 0;
+}
+
+.column-content{
+  padding: 11% 5%;
+}
+
+
+
+/* Responsive design - this is for tablets and smartphones */
+@media screen and (max-width: 750px) {
+  .col-1-2 {
+    width: 100%;
+  }
+
+  .col-1-4 {
+    width: 100%;
+  }
+}
+
+/* Responsive design - this is laptops and desktops */
+@media screen and (min-width: 751px) {
+  .col-1-2 {
+    width: 60%;
+  }
+
+  .col-1-4 {
+    width: 20%;
+  }
+}
+
+.certificate-img{
+  padding-top: 20%;
+}
+/* Custom styles */
+.column-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.download-icon {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* STRUCTURE */
+
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 100%;
+	margin: 20px auto;
+}
+
+
+.certificate-column,.certificate-img{
+  float: left;
+  padding: 10px;
+  
+}
+.certificate-img{
+width:30%
+}
+.certificate-column{
+width:70%
+}
+.certificate{
+  display: flex;
+  justify-content: center; /* Center content horizontally */ 
+ 
+}
+.certificate:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .certificate-img,.certificate-column{
+      width: 100%;
+  }
+  .certificate {
+    flex-direction: column; /* Stack columns vertically on small screens */
+  }
+}
 
 
 /* section-5 : faq */
@@ -1256,7 +1372,7 @@ h4 {
 
 
 .pg-footer {
-  font-family: 'Roboto', sans-serif;
+  font-family:inherit;
 }
 
 
@@ -1307,7 +1423,7 @@ h4 {
 
 .footer-menu-name {
     color: #fffff2;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 900;
     letter-spacing: .1em;
     line-height: 18px;
@@ -1323,6 +1439,8 @@ h4 {
 }
 .footer-menu-list li {
     margin-top: 5px;
+    font-size: 16px;
+    font-family: inherit;
 }
 
 .footer-call-to-action-description {
