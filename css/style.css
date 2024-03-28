@@ -1206,7 +1206,93 @@ video {
 
 
 
+/* About us */
+.about .container{
+  text-align: center;
+  padding-top: 10%;
+}
+.steps {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+}
+.steps div {
+  width: 100%;
+  height: 2px;
+  background: rgba(49, 140, 252, 0.25);
+  position: relative;
+}
+.steps div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #31fcae;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+.steps div.active::after {
+  transform: scaleX(1);
+}
+.steps button {
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #318cfc;
+  color: #31fcab;
+  font-weight: 900;
+  border-radius: 100%;
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  box-shadow: 0.9px 2.8px 2.2px rgba(49, 140, 252, 0.02), 2.1px 6.7px 5.3px rgba(49, 140, 252, 0.028), 4px 12.5px 10px rgba(49, 140, 252, 0.035), 7.1px 22.3px 17.9px rgba(49, 140, 252, 0.042), 13.4px 41.8px 33.4px rgba(49, 140, 252, 0.05), 32px 100px 80px rgba(49, 140, 252, 0.07);
+  background: white;
+  transition: all 0.3s ease;
+}
+.steps button.active {
+  background: #31fc6a;
+  color: white;
+}
 
+.contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+.content.active {
+  opacity: 1;
+  z-index: 10;
+}
+.content__box {
+  background: white;
+  box-shadow: 0.9px 2.8px 2.2px rgba(49, 140, 252, 0.02), 2.1px 6.7px 5.3px rgba(49, 140, 252, 0.028), 4px 12.5px 10px rgba(49, 140, 252, 0.035), 7.1px 22.3px 17.9px rgba(49, 140, 252, 0.042), 13.4px 41.8px 33.4px rgba(49, 140, 252, 0.05), 32px 100px 80px rgba(49, 140, 252, 0.07);
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
 
 
@@ -1310,8 +1396,6 @@ video {
 }
 
 
-
-/* Responsive design - this is for tablets and smartphones */
 @media screen and (max-width: 750px) {
   .col-1-2 {
     width: 100%;
@@ -1322,7 +1406,6 @@ video {
   }
 }
 
-/* Responsive design - this is laptops and desktops */
 @media screen and (min-width: 751px) {
   .col-1-2 {
     width: 60%;
@@ -2108,3 +2191,9 @@ h4 {
       width: 49.99%;
   } */
 }
+
+
+
+
+
+
