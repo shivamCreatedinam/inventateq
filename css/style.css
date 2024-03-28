@@ -1136,6 +1136,101 @@ video {
   font-size: 25px;
 }
 
+
+
+
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider__dream {
+  
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider__dream::before,
+.slider__dream::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width:auto;
+  z-index: 2;
+}
+.slider__dream::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+.slider__dream::before {
+  left: 0;
+  top: 0;
+}
+.slider__dream .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider__dream .slide__dream {
+  height: 100%;
+  width: auto;
+  margin:0px 8px;
+}
+
+.slide__dream img{
+  border-radius: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* section 4 - certificate */
 
 .box-container {
@@ -1255,14 +1350,7 @@ video {
 }
 
 
-
-
-
-
-
-
-
-/* STRUCTURE */
+/* certificate */
 
 .wrapper {
 	padding: 5px;
@@ -1371,9 +1459,9 @@ h4 {
 
 /* Courses */
 
-.courses{
+.courses {
   text-align: center;
-  padding: 0% 0% 5% 0%;
+  padding: 10% 0% 2% 0%;
 }
 
 .card-slider {
@@ -1402,15 +1490,28 @@ h4 {
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: white;
   text-decoration: none;
-  border-radius:25px;
+  border-radius:10px;
   color: rgba(0, 0, 0, 0.9);
   transition: all 0.1s linear;
-  padding: 10px;
+  padding: 5px;
 }
 @media screen and (max-width: 600px) {
   .card-slider .card {
     height: auto;
   }
+  .dream h4{
+    padding: 2% 5% 5% 5%;
+    font-size:14px;
+  }
+}
+.dream .container{
+  padding: 10% 0% 2% 0%;
+}
+.dream h2{
+  text-align: center;
+}
+.card-slider .card {
+  background-color:#f4fffa ;
 }
 .card-slider .card .main-link {
   text-decoration: none;
@@ -1439,13 +1540,13 @@ h4 {
 .card-slider .card .image {
   order: -1;
   position: relative;
-  height: 150px;
+  height: 200px;
   padding: 2px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
+  border-radius:10px;
 }
 .card-slider .card .image img {
   width: 100%;
